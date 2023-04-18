@@ -1,8 +1,12 @@
 "use strict";
 
-state.catList = new CatList([]);
 const selectElement = document.getElementById("catStyle");
 const imgStyle = document.getElementById("classCat");
+
+function loadCats() {
+  const cats = JSON.parse(localStorage.getItem("catList")) || [];
+  state.catList = new CatList(cats);
+}
 
 function populateForm() {
   for (let i in state.catStyles) {
@@ -23,6 +27,11 @@ function addCatToList() {
   state.catList.addCat(catTemp);
 }
 populateForm();
+loadCats();
+
+selectElement.addEventListener("change", handleChangeStyle);
+const catForm = document.getElementById("newCat");
+catForm.addEventListener("submit", handleSubmit);
 
 function handleChangeStyle(event) {
   console.log(selectElement.value);
@@ -38,7 +47,3 @@ function handleSubmit(event) {
   addCatToList();
   state.catList.saveToLocalStorage();
 }
-
-selectElement.addEventListener("change", handleChangeStyle);
-const catForm = document.getElementById("newCat");
-catForm.addEventListener("submit", handleSubmit);

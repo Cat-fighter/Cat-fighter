@@ -1,0 +1,33 @@
+.figther-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Figther1 Fighter2"
+    "fightLaunch fightLaunch";
+}
+
+.figther1 {
+  justify-self: center;
+  align-self: center;
+  grid-area: Figther1;
+
+  display: flex;
+  flex-direction: column;
+}
+.fighter2 {
+  justify-self: center;
+  align-self: center;
+  grid-area: Fighter2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.fightLaunch {
+  justify-self: center;
+  align-self: center;
+  grid-area: fightLaunch;
+}
