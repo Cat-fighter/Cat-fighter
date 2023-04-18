@@ -26,7 +26,28 @@
 
     <main>
       <div class="container main-container">
-        <h1>catfactory</h1>
+        <section class="formCat">
+            <form id="newCat">
+                <div class="img">
+                  <img id="classCat" src="https://placehold.co/300x300" />
+                </div>
+                <div class="style-selector">
+                  <label>Cat Style:</label>
+                    <select id="catStyle"></select>
+                </div>
+                <div class="statistique">
+                    <span>Cat characteristics</span> 
+                    <label for="attCat">Att :<input type="number" id="attCat" /></label>
+                    <label for="defCat">Def :<input type="number" id="defCat" /></label>
+                    <label for="hpCat">HP :<input type="number" id="hpCat" /></label>
+                    
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Add to the fighters !" />
+                </div>
+            </form>
+          </div>
+        </section>
       </div>
     </main>
     <footer>

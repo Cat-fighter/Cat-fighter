@@ -1,0 +1,36 @@
+#newCat {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "Img Statistique"
+    "Style-Selector Submit";
+}
+
+.img {
+  justify-self: center;
+  align-self: center;
+  grid-area: Img;
+}
+.statistique {
+  justify-self: center;
+  align-self: center;
+  grid-area: Statistique;
+
+  display: flex;
+  flex-direction: column;
+}
+.style-selector {
+  justify-self: center;
+  align-self: center;
+  grid-area: Style-Selector;
+}
+.submit {
+  justify-self: center;
+  align-self: center;
+  grid-area: Submit;
+}
+input {
+  margin: 5px;
+}
