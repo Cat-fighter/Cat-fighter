@@ -17,6 +17,15 @@ header {
   font-size: 20px;
 }
 
+
+.fighter1 {
+  justify-self: center;
+  align-self: center;
+  grid-area: Fighter1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 h1 {
   font-family: "Sedgwick Ave Display", cursive;
 }
@@ -33,6 +42,10 @@ footer {
 
 ul {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
   justify-content: center;
   font-family: "Sedgwick Ave Display", cursive;
@@ -51,4 +64,13 @@ li {
 }
 .main-container {
   margin-bottom: 3rem;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+button {
+  margin-bottom: 15px;
 }
