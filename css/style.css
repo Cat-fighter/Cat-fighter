@@ -11,25 +11,22 @@ body {
   font-family: "Sedgwick Ave Display", cursive;
 }
 header {
-  background-color: #333533;
+  background-color: #202020;
   text-align: center;
   font-family: "Sedgwick Ave Display", cursive;
   font-size: 20px;
-}
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 h1 {
   font-family: "Sedgwick Ave Display", cursive;
 }
+.logo {
+  width: 100%;
+}
 
-.container {
-  width: 90%;
-  padding: 10px;
-  margin: 0 auto;
+.active {
+  background-color: #ffd100;
+  color: #333533;
 }
 footer {
   background-color: #333533;
@@ -41,8 +38,23 @@ footer {
 
 ul {
   display: flex;
+
   justify-content: center;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 800;
+
+  margin: 0;
+  padding: 0;
 }
+a {
+  text-decoration: none;
+  color: #ffd100;
+  list-style-type: none;
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: #333533;
+}
+
 li {
   margin: 15px;
 }

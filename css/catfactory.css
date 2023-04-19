@@ -64,3 +64,11 @@ input {
 .slider::-moz-range-thumb {
   cursor: pointer; /* Cursor on hover */
 }
+
+.main-container {
+  width: 80vw;
+  margin: 0 auto;
+  background-color: #333533;
+  margin-top: 1rem;
+  color: #ffee32;
+}
