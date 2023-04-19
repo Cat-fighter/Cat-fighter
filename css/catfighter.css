@@ -17,6 +17,16 @@ header {
   font-size: 20px;
 }
 
+.fighter-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Fighter1 Fighter2"
+    "fightLaunch fightLaunch";
+}
 
 .fighter1 {
   justify-self: center;
@@ -26,51 +36,23 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-h1 {
-  font-family: "Sedgwick Ave Display", cursive;
 }
-img {
-  width: 100%;
-}
-footer {
-  background-color: #333533;
-  height: 2rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+.fighter2 {
+  justify-self: center;
+  align-self: center;
+  grid-area: Fighter2;
 
-ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
-  justify-content: center;
-  font-family: "Sedgwick Ave Display", cursive;
-  font-weight: 800;
-
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-  color: #ffd100;
-  list-style-type: none;
-}
-li {
-  margin: 15px;
-}
-.main-container {
-  margin-bottom: 3rem;
+.fightLaunch {
+  justify-self: center;
+  align-self: center;
+  grid-area: fightLaunch;
 }
 
-img {
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-}
 button {
   margin-bottom: 15px;
 }
