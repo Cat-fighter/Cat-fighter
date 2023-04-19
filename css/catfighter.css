@@ -1,33 +1,54 @@
-.fighter-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5fr 0.5fr;
-  gap: 10px 10px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Fighter1 Fighter2"
-    "fightLaunch fightLaunch";
+* {
+  box-sizing: border-box;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+html {
+  scroll-behavior: smooth;
+  text-align: center;
+}
+body {
+  background-color: #d6d6d6;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+header {
+  background-color: #333533;
+  text-align: center;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 20px;
 }
 
-.fighter1 {
-  justify-self: center;
-  align-self: center;
-  grid-area: Fighter1;
+h1 {
+  font-family: "Sedgwick Ave Display", cursive;
+}
+img {
+  width: 100%;
+}
+footer {
+  background-color: #333533;
+  height: 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
+ul {
   display: flex;
-  flex-direction: column;
-}
-.fighter2 {
-  justify-self: center;
-  align-self: center;
-  grid-area: Fighter2;
 
-  display: flex;
-  flex-direction: column;
-}
+  justify-content: center;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 800;
 
-.fightLaunch {
-  justify-self: center;
-  align-self: center;
-  grid-area: fightLaunch;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #ffd100;
+  list-style-type: none;
+}
+li {
+  margin: 15px;
+}
+.main-container {
+  margin-bottom: 3rem;
 }
