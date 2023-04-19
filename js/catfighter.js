@@ -6,6 +6,9 @@ const selectFighter2 = document.getElementById("fighter2-select");
 //get element of image
 const imgFighter1 = document.getElementById("fighter1Img");
 const imgFighter2 = document.getElementById("fighter2Img");
+//get element of punch image
+const punchLeft = document.getElementById("pawpunchleft");
+const punchRight = document.getElementById("pawpunchright");
 //hide them at beginning as none is selected
 imgFighter1.style.visibility = "hidden";
 imgFighter2.style.visibility = "hidden";
@@ -149,6 +152,8 @@ function roundFighter1() {
     hpFighter2 = 0;
   }
   textHpFighter2.innerHTML = hpFighter2.toFixed(2);
+  punchLeft.style.visibility = "visible";
+  punchLeft.style.animationName = "leftToRight";
 }
 
 function roundFighter2() {
@@ -158,4 +163,5 @@ function roundFighter2() {
     hpFighter1 = 0;
   }
   textHpFighter1.innerHTML = hpFighter1.toFixed(2);
+  punchRight.style.visibility = "visible";
 }

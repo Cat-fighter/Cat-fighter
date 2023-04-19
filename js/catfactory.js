@@ -64,6 +64,12 @@ function handleChangeStyle(event) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  addCatToList();
-  state.catList.saveToLocalStorage();
+
+  let name = document.getElementById("nameCat");
+  if (!name) {
+    
+  } else {
+    addCatToList();
+    state.catList.saveToLocalStorage();
+  }
 }
