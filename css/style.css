@@ -29,11 +29,12 @@ h1 {
   color: #333533;
 }
 footer {
-  background-color: #333533;
+  background-color: #202020;
   height: 2rem;
   position: fixed;
   bottom: 0;
   width: 100%;
+  textwe
 }
 
 ul {
@@ -55,6 +56,10 @@ a {
   box-shadow: #333533;
 }
 
+a:hover {
+  background-color: #ffd100;
+  color: #333533;
+}
 li {
   margin: 15px;
 }
