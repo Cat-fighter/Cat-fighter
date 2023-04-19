@@ -124,14 +124,14 @@ async function handleRumble(event) {
     }
   } else {
     while (hpFighter1 > 0 && hpFighter2 > 0) {
-      await sleep(1000);
+      await sleep(500);
       roundFighter2();
       if (hpFighter1 == 0) {
         statut.innerHTML = "Fighter 2 WIN !";
         statut.style.color = "green";
         break;
       }
-      await sleep(1000);
+      await sleep(500);
       roundFighter1();
       if (hpFighter2 == 0) {
         statut.innerHTML = "Fighter 1 WIN !";
@@ -143,7 +143,8 @@ async function handleRumble(event) {
 }
 
 function roundFighter1() {
-  hpFighter2 -= attFighter1 * 0.1;
+  let damagecalcul = attFighter1 * 0.1 - defFighter2 * 0.02;
+  hpFighter2 -= damagecalcul;
   if (hpFighter2 < 0) {
     hpFighter2 = 0;
   }
@@ -151,7 +152,8 @@ function roundFighter1() {
 }
 
 function roundFighter2() {
-  hpFighter1 -= attFighter2 * 0.1;
+  let damagecalcul = attFighter2 * 0.1 - defFighter1 * 0.02;
+  hpFighter1 -= damagecalcul;
   if (hpFighter1 < 0) {
     hpFighter1 = 0;
   }
