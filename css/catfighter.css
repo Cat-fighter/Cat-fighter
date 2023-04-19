@@ -1,18 +1,18 @@
-.figther-container {
+.fighter-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1.5fr 0.5fr;
   gap: 10px 10px;
   grid-auto-flow: row;
   grid-template-areas:
-    "Figther1 Fighter2"
+    "Fighter1 Fighter2"
     "fightLaunch fightLaunch";
 }
 
-.figther1 {
+.fighter1 {
   justify-self: center;
   align-self: center;
-  grid-area: Figther1;
+  grid-area: Fighter1;
 
   display: flex;
   flex-direction: column;

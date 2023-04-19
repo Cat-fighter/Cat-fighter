@@ -32,21 +32,26 @@
 
     <main>
       <div class="container main-container">
-        <section class="formCat">
             <form id="newCat">
                 <div class="img">
                   <img id="classCat" src="../img/cat1.jpg" />
                 </div>
                 <div class="style-selector">
-                  <label>Cat Style:</label>
-                    <select id="catStyle"></select>
+                  <label for="catStyle">Cat Style: <select id="catStyle"></select> </label>         
+                            
+                  <label for="nameCat">Name : </label>
+                  <input type="text" id="nameCat" />
                 </div>
                 <div class="statistique">
-                    <span>Cat characteristics</span> 
-                    <label for="attCat">Att :<input type="number" id="attCat" /></label>
-                    <label for="defCat">Def :<input type="number" id="defCat" /></label>
-                    <label for="hpCat">HP :<input type="number" id="hpCat" /></label>
-                    <label for="nameCat">Name :<input type="text" id="nameCat" /></label>
+                    <p>Cat characteristics</p> 
+                    <br>
+                    <label for="attRange">Att : <input type="range" min="1" max="100" value="50" class="slider" id="attRange"></label>
+                    <p>Value: <span id="attValue"></span></p>
+                    <label for="defRange">Def : <input type="range" min="1" max="100" value="50" class="slider" id="defRange"></label>
+                    <p>Value: <span id="defValue"></span></p>
+                    <label for="hpRange">HP : <input type="range" min="1" max="100" value="50" class="slider" id="hpRange"></label>
+                    <p>Value: <span id="hpValue"></span></p>
+
                     
                 </div>
                 <div class="submit">
@@ -54,7 +59,6 @@
                 </div>
             </form>
           </div>
-        </section>
       </div>
     </main>
     <footer>

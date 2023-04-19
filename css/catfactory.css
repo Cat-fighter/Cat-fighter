@@ -13,6 +13,10 @@
   align-self: center;
   grid-area: Img;
 }
+img {
+  width: 50%;
+  height: 50%;
+}
 .statistique {
   justify-self: center;
   align-self: center;
@@ -31,6 +35,32 @@
   align-self: center;
   grid-area: Submit;
 }
+
+label {
+  float: left;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
 input {
-  margin: 5px;
+  float: right;
+}
+
+.slider {
+  background: #d3d3d3; /* Grey background */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  cursor: pointer; /* Cursor on hover */
 }
