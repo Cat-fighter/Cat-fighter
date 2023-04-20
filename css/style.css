@@ -15,7 +15,7 @@ header {
   background-color: #202020;
   text-align: center;
   font-family: "Sedgwick Ave Display", cursive;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .logo {
@@ -64,7 +64,7 @@ li {
   margin: 0 auto;
   margin-top: 1rem;
   margin-bottom: 3rem;
-  font-size: 20px;
+  font-size: 17px;
   background-color: #333533;
 }
 
@@ -79,7 +79,7 @@ h3 {
 }
 
 .homeimage {
-  width: 100%;
+  width: 90%;
   margin-bottom: 5px;
 }
 
@@ -96,4 +96,12 @@ h4 {
 
 p {
   padding: 3px;
+}
+
+.rumble {
+  font-size: 20px;
+}
+
+.rumble:hover {
+  color: #ffd100;
 }
