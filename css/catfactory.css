@@ -95,4 +95,6 @@ input {
 
 img {
   height: 30vh;
+  width: auto;
+  border-radius: 16px;
 }

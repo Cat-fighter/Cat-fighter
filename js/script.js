@@ -44,3 +44,9 @@ const Cat = function (style, filepath, name, att, def, hp) {
   this.hp = hp;
   this.name = name;
 };
+
+$("#links a").click(function (e) {
+  e.preventDefault();
+  var beepOne = $("#beep-one")[0];
+  beepOne.play();
+});

@@ -33,6 +33,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
+  font-size: 23px;
 }
 .fighter2 {
   justify-self: center;
@@ -41,6 +43,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
+  font-size: 23px;
 }
 .fightZone {
   justify-self: center;
@@ -52,6 +56,7 @@ img {
   justify-self: center;
   align-self: center;
   grid-area: fightLaunch;
+  font-size: 30px;
 }
 
 button {
@@ -62,6 +67,8 @@ button {
   margin: 10px;
   position: relative;
   max-height: 30vh;
+  width: auto;
+  border-radius: 16px;
 }
 .animationFighter1 {
   animation-name: leftToRight;
