@@ -58,6 +58,7 @@ button {
 .fighter {
   margin: 10px;
   position: relative;
+  max-height: 30vh;
 }
 .animationFighter1 {
   animation-name: leftToRight;
@@ -86,17 +87,17 @@ button {
 }
 
 .posFightFighter1 {
-  left: 120px;
+  left: 200px;
 }
 .posFightFighter2 {
-  left: -120px;
+  left: -200px;
 }
 
 .winnerFighter1 {
-  left: 300px;
+  left: 260px;
 }
 .winnerFighter2 {
-  left: -300px;
+  left: -260px;
 }
 
 @keyframes leftToRight {
@@ -104,10 +105,10 @@ button {
     left: 0;
   }
   50% {
-    left: 60;
+    left: 100;
   }
   100% {
-    left: 120px;
+    left: 200px;
   }
 }
 
@@ -116,10 +117,10 @@ button {
     left: 0;
   }
   50% {
-    left: -60;
+    left: -100;
   }
   100% {
-    left: -120px;
+    left: -200px;
   }
 }
 @keyframes winnerHighlight {
