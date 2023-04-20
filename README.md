@@ -4,12 +4,10 @@
 
 Here is the original template :
 
-```HTML
 <img src="img/wireframe1.png"  width="20%" height="30%">
 <img src="img/wireframe2.png"  width="20%" height="30%">
 <img src="img/wireframe3.png"  width="20%" height="30%">
 <img src="img/wireframe4.png"  width="20%" height="30%">
-```
 
 Here is the color theme choose:
 
