@@ -4,10 +4,10 @@
 
 Here is the original template :
 
-![wireframe1](img/wireframe1.png)
-![wireframe2](img/wireframe2.png)
-![wireframe3](img/wireframe3.png)
-![wireframe4](img/wireframe4.png)
+<img src="img/wireframe1.png"  width="20%" height="30%">
+<img src="img/wireframe2.png"  width="20%" height="30%">
+<img src="img/wireframe3"  width="20%" height="30%">
+<img src="img/wireframe4"  width="20%" height="30%">
 
 Here is the color theme choose:
 
