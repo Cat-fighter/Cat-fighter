@@ -10,6 +10,11 @@ Here is the original template :
 <img src="img/wireframe3.png"  width="20%" height="30%">
 <img src="img/wireframe4.png"  width="20%" height="30%">
 </p>
+
+| Home Page                          | Cat Factory                        | Cat List                           | Fighter                            |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| ![Wireframe 1](img/wireframe1.png) | ![Wireframe 2](img/wireframe2.png) | ![Wireframe 3](img/wireframe3.png) | ![Wireframe 4](img/wireframe4.png) |
+
 Here is the color theme choose:
 
 ![color theme](img/color%20theme.png)
