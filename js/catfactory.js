@@ -43,7 +43,7 @@ catForm.addEventListener("submit", handleSubmit);
 outputAtt.innerHTML = sliderAtt.value;
 outputDef.innerHTML = sliderDef.value;
 outputHp.innerHTML = sliderHp.value;
-let totalStat = parseInt(sliderAtt.value) + parseInt(sliderAtt.value) + parseInt(sliderAtt.value);
+let totalStat = parseInt(sliderAtt.value) + parseInt(sliderDef.value) + parseInt(sliderHp.value);
 pointLeft.innerHTML = 100 - totalStat;
 
 sliderAtt.oninput = function () {

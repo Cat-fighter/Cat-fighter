@@ -30,6 +30,9 @@ let attFighter2 = 0;
 let defFighter2 = 0;
 let hpFighter2 = 0;
 
+//Get other elements
+const reset = document.getElementById("refresh");
+reset.style.visibility = "hidden";
 const rumble = document.getElementById("rumble");
 const statut = document.getElementById("status");
 
@@ -54,6 +57,9 @@ populateForm();
 selectFighter1.addEventListener("change", handleFighter1Change);
 selectFighter2.addEventListener("change", handleFighter2Change);
 rumble.addEventListener("click", handleRumble);
+reset.addEventListener("click", function (event) {
+  window.location.reload();
+});
 
 function handleFighter1Change(event) {
   imgFighter1.style.visibility = "visible";
@@ -83,8 +89,8 @@ function handleFighter2Change(event) {
       defFighter2 = state.catList.cat[i].def;
 
       textHpFighter2.innerHTML = hpFighter2;
-      textAttFighter2.innerHTML = defFighter2;
-      textDefFighter2.innerHTML = attFighter2;
+      textAttFighter2.innerHTML = attFighter2;
+      textDefFighter2.innerHTML = defFighter2;
     }
   }
 }
@@ -173,11 +179,15 @@ async function handleRumble(event) {
       }
     }
   }
+  reset.style.visibility = "visible";
 }
 
 function roundFighter1() {
   imgFighter2.classList.add("animationShaking");
-  let damagecalcul = attFighter1 * 0.1 - defFighter2 * 0.02;
+  let damagecalcul = attFighter1 * 0.2 - defFighter2 * 0.02;
+  if (damagecalcul < 0) {
+    damagecalcul = 0;
+  }
   hpFighter2 -= damagecalcul;
   if (hpFighter2 < 0) {
     hpFighter2 = 0;
@@ -187,7 +197,10 @@ function roundFighter1() {
 
 function roundFighter2() {
   imgFighter1.classList.add("animationShaking");
-  let damagecalcul = attFighter2 * 0.1 - defFighter1 * 0.02;
+  let damagecalcul = attFighter2 * 0.2 - defFighter1 * 0.02;
+  if (damagecalcul < 0) {
+    damagecalcul = 0;
+  }
   hpFighter1 -= damagecalcul;
   if (hpFighter1 < 0) {
     hpFighter1 = 0;
