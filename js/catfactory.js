@@ -9,6 +9,7 @@ let sliderDef = document.getElementById("defRange");
 let outputDef = document.getElementById("defValue");
 let sliderHp = document.getElementById("hpRange");
 let outputHp = document.getElementById("hpValue");
+let pointLeft = document.getElementById("pointsLeft");
 
 function loadCats() {
   const cats = JSON.parse(localStorage.getItem("catList")) || [];
@@ -42,15 +43,23 @@ catForm.addEventListener("submit", handleSubmit);
 outputAtt.innerHTML = sliderAtt.value;
 outputDef.innerHTML = sliderDef.value;
 outputHp.innerHTML = sliderHp.value;
+let totalStat = parseInt(sliderAtt.value) + parseInt(sliderAtt.value) + parseInt(sliderAtt.value);
+pointLeft.innerHTML = 100 - totalStat;
 
 sliderAtt.oninput = function () {
   outputAtt.innerHTML = this.value;
+  totalStat = parseInt(sliderAtt.value) + parseInt(sliderDef.value) + parseInt(sliderHp.value);
+  pointLeft.innerHTML = 100 - totalStat;
 };
 sliderDef.oninput = function () {
   outputDef.innerHTML = this.value;
+  totalStat = parseInt(sliderAtt.value) + parseInt(sliderDef.value) + parseInt(sliderHp.value);
+  pointLeft.innerHTML = 100 - totalStat;
 };
 sliderHp.oninput = function () {
   outputHp.innerHTML = this.value;
+  totalStat = parseInt(sliderAtt.value) + parseInt(sliderDef.value) + parseInt(sliderHp.value);
+  pointLeft.innerHTML = 100 - totalStat;
 };
 
 function handleChangeStyle(event) {
@@ -66,10 +75,25 @@ function handleSubmit(event) {
   event.preventDefault();
 
   let name = document.getElementById("nameCat");
-  if (!name) {
-    
+  let alreadyTaken = false;
+
+  if (name.value === "") {
+    confirm("please enter a name !");
   } else {
-    addCatToList();
-    state.catList.saveToLocalStorage();
+    for (let i in state.catList.cat) {
+      if (state.catList.cat[i].name === name.value) {
+        confirm("This fighter name already exist, please choose another one !");
+        alreadyTaken = true;
+      }
+    }
+    if (!alreadyTaken) {
+      if (totalStat > 100) {
+        confirm("Total Stats can't be superior to 100 !");
+      } else {
+        addCatToList();
+        state.catList.saveToLocalStorage();
+        confirm("Fighter added to the list !");
+      }
+    }
   }
 }
