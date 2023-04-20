@@ -4,11 +4,12 @@
 
 Here is the original template :
 
+<p float="left">
 <img src="img/wireframe1.png"  width="20%" height="30%">
 <img src="img/wireframe2.png"  width="20%" height="30%">
 <img src="img/wireframe3.png"  width="20%" height="30%">
 <img src="img/wireframe4.png"  width="20%" height="30%">
-
+</p>
 Here is the color theme choose:
 
 ![color theme](img/color%20theme.png)
