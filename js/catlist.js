@@ -46,10 +46,14 @@ function showCats() {
 
 //function to remove a cat when we click on a delete button
 function handleRemoveCat(event) {
-  if (confirm("Are you sure to delete : " + event.target.id + " ?") == true) {
-    state.catList.removeCat(event.target.id);
-    state.catList.saveToLocalStorage();
-    renderCat();
+  for (let i = 0; i < state.catList.cat.length; i++) {
+    if (state.catList.cat[i].name === event.target.id) {
+      if (confirm("Are you sure to delete : " + event.target.id + " ?") == true) {
+        state.catList.removeCat(event.target.id);
+        state.catList.saveToLocalStorage();
+        renderCat();
+      }
+    }
   }
 }
 
