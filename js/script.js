@@ -4,10 +4,9 @@
 
 const state = {
   catStyles: [
-    { style: "style1", filePath: "../img/cat1.jpg" },
-    { style: "style2", filePath: "../img/cat2.jpg" },
-    { style: "style3", filePath: "../img/cat3.jpg" },
-    { style: "style4", filePath: "../img/cat4.jpg" },
+    { style: "Miarior", filePath: "../img/cat1.jpg" },
+    { style: "Miagicien", filePath: "../img/cat2.jpg" },
+    { style: "Miarcher", filePath: "../img/cat3.jpg" },
   ],
   catList: null,
 };
