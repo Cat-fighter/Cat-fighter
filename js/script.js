@@ -4,9 +4,11 @@
 
 const state = {
   catStyles: [
-    { style: "Miarior", filePath: "../img/cat1.jpg" },
-    { style: "Miagicien", filePath: "../img/cat2.jpg" },
-    { style: "Miarcher", filePath: "../img/cat3.jpg" },
+    { style: "Miarior", filePath: "../img/Miaror.png" },
+    { style: "Miasword", filePath: "../img/Miasword.png" },
+    { style: "Miarior King", filePath: "../img/Miaror-King.png" },
+    { style: "Miagicien", filePath: "../img/Miagicien.png" },
+    { style: "Miarcher", filePath: "../img/Miarcher.png" },
   ],
   catList: null,
 };

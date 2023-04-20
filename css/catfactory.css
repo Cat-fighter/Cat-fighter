@@ -92,3 +92,7 @@ input {
 .button:hover {
   color: #ffd100;
 }
+
+img {
+  height: 30vh;
+}
