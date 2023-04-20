@@ -22,6 +22,14 @@ CatList.prototype.addCat = function (Cat) {
   this.cat.push(Cat);
 };
 
+CatList.prototype.removeCat = function (catName) {
+  for (let i = 0; i < state.catList.cat.length; i++) {
+    if (state.catList.cat[i].name === catName) {
+      state.catList.cat.splice(i, 1);
+    }
+  }
+};
+
 CatList.prototype.saveToLocalStorage = function () {
   localStorage.setItem("catList", JSON.stringify(state.catList.cat));
 };

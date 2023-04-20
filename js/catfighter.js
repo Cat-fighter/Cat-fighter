@@ -6,9 +6,6 @@ const selectFighter2 = document.getElementById("fighter2-select");
 //get element of image
 const imgFighter1 = document.getElementById("fighter1Img");
 const imgFighter2 = document.getElementById("fighter2Img");
-//get element of punch image
-const punchLeft = document.getElementById("pawpunchleft");
-const punchRight = document.getElementById("pawpunchright");
 //hide them at beginning as none is selected
 imgFighter1.style.visibility = "hidden";
 imgFighter2.style.visibility = "hidden";
@@ -104,6 +101,15 @@ function getRandomInt(min, max) {
 
 async function handleRumble(event) {
   rumble.removeEventListener("click", handleRumble);
+  //add animation class
+  imgFighter1.classList.add("animationFighter1");
+  imgFighter2.classList.add("animationFighter2");
+  await sleep(2000);
+  imgFighter1.classList.remove("animationFighter1");
+  imgFighter2.classList.remove("animationFighter2");
+  //leave fighter in middle
+  imgFighter1.classList.add("posFightFighter1");
+  imgFighter2.classList.add("posFightFighter2");
 
   let fighterStart = getRandomInt(1, 2);
   statut.innerHTML = "Fighter " + fighterStart + " is starting this fight !";
@@ -112,33 +118,57 @@ async function handleRumble(event) {
     while (hpFighter1 > 0 || hpFighter2 > 0) {
       await sleep(1000);
       roundFighter1();
+      await sleep(1000);
+      imgFighter2.classList.remove("animationShaking");
       if (hpFighter2 == 0) {
         statut.innerHTML = "Fighter 1 WIN !";
         statut.style.color = "green";
+        imgFighter1.classList.remove("posFightFighter1");
+        imgFighter2.classList.remove("posFightFighter2");
+        imgFighter1.classList.add("winnerFighter1");
+        imgFighter1.classList.add("animationWinner");
         break;
       }
       await sleep(1000);
       roundFighter2();
+      await sleep(1000);
+      imgFighter1.classList.remove("animationShaking");
       if (hpFighter1 == 0) {
         statut.innerHTML = "Fighter 2 WIN !";
         statut.style.color = "green";
+        imgFighter1.classList.remove("posFightFighter1");
+        imgFighter2.classList.remove("posFightFighter2");
+        imgFighter2.classList.add("winnerFighter2");
+        imgFighter2.classList.add("animationWinner");
         break;
       }
     }
   } else {
     while (hpFighter1 > 0 && hpFighter2 > 0) {
-      await sleep(500);
+      await sleep(1000);
       roundFighter2();
+      await sleep(1000);
+      imgFighter1.classList.remove("animationShaking");
       if (hpFighter1 == 0) {
         statut.innerHTML = "Fighter 2 WIN !";
         statut.style.color = "green";
+        imgFighter1.classList.remove("posFightFighter1");
+        imgFighter2.classList.remove("posFightFighter2");
+        imgFighter2.classList.add("winnerFighter2");
+        imgFighter2.classList.add("animationWinner");
         break;
       }
-      await sleep(500);
+      await sleep(1000);
       roundFighter1();
+      await sleep(1000);
+      imgFighter2.classList.remove("animationShaking");
       if (hpFighter2 == 0) {
         statut.innerHTML = "Fighter 1 WIN !";
         statut.style.color = "green";
+        imgFighter1.classList.remove("posFightFighter1");
+        imgFighter2.classList.remove("posFightFighter2");
+        imgFighter1.classList.add("winnerFighter1");
+        imgFighter1.classList.add("animationWinner");
         break;
       }
     }
@@ -146,22 +176,21 @@ async function handleRumble(event) {
 }
 
 function roundFighter1() {
+  imgFighter2.classList.add("animationShaking");
   let damagecalcul = attFighter1 * 0.1 - defFighter2 * 0.02;
   hpFighter2 -= damagecalcul;
   if (hpFighter2 < 0) {
     hpFighter2 = 0;
   }
   textHpFighter2.innerHTML = hpFighter2.toFixed(2);
-  punchLeft.style.visibility = "visible";
-  punchLeft.style.animationName = "leftToRight";
 }
 
 function roundFighter2() {
+  imgFighter1.classList.add("animationShaking");
   let damagecalcul = attFighter2 * 0.1 - defFighter1 * 0.02;
   hpFighter1 -= damagecalcul;
   if (hpFighter1 < 0) {
     hpFighter1 = 0;
   }
   textHpFighter1.innerHTML = hpFighter1.toFixed(2);
-  punchRight.style.visibility = "visible";
 }
