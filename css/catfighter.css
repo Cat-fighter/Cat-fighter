@@ -9,9 +9,12 @@ img {
   height: 50vh;
   width: 80vw;
   margin-bottom: 0;
+  background-color: transparent;
+  margin-top: 0px;
 }
 
 .fighter-container {
+  padding-top: 15px;
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 2fr 1fr 2fr;
@@ -87,17 +90,17 @@ button {
 }
 
 .posFightFighter1 {
-  left: 200px;
+  left: 14vw;
 }
 .posFightFighter2 {
-  left: -200px;
+  left: -14vw;
 }
 
 .winnerFighter1 {
-  left: 260px;
+  left: 25vw;
 }
 .winnerFighter2 {
-  left: -260px;
+  left: -25vw;
 }
 
 @keyframes leftToRight {
@@ -105,10 +108,10 @@ button {
     left: 0;
   }
   50% {
-    left: 100;
+    left: 7vw;
   }
   100% {
-    left: 200px;
+    left: 14vw;
   }
 }
 
@@ -117,10 +120,10 @@ button {
     left: 0;
   }
   50% {
-    left: -100;
+    left: -7vw;
   }
   100% {
-    left: -200px;
+    left: -14vw;
   }
 }
 @keyframes winnerHighlight {
@@ -171,9 +174,9 @@ button {
   }
 }
 
-.main-container {
+main {
   background-image: url("../img/background3.jpg");
-  min-height: 1000px;
+  min-height: 71vh;
   background-size: cover;
   background-position: center;
 }
