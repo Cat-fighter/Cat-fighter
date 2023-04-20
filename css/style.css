@@ -7,19 +7,19 @@ html {
   text-align: center;
 }
 body {
-  background-color: #d6d6d6;
+  background-color: #333533;
   font-family: "Sedgwick Ave Display", cursive;
+  color: #D6D6D6;
 }
 header {
   background-color: #202020;
   text-align: center;
   font-family: "Sedgwick Ave Display", cursive;
-  font-size: 20px;
+  font-size: 22px;
 }
 
-h1 {
-  font-family: "Sedgwick Ave Display", cursive;
-}
+
+
 .logo {
   width: 100%;
 }
@@ -30,6 +30,7 @@ h1 {
 }
 footer {
   background-color: #202020;
+  padding-top: 7px;
   height: 2rem;
   position: fixed;
   bottom: 0;
@@ -65,4 +66,26 @@ li {
 }
 .main-container {
   margin-bottom: 3rem;
+  font-size: 20px;
+}
+
+h1 {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 34px;
+  padding: 50px;
+}
+
+h2 {
+  font-family: sans-serif;
+  padding: 20px;
+}
+h3 {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 20px;
 }
