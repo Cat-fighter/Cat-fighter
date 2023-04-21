@@ -184,7 +184,7 @@ async function handleRumble(event) {
 
 function roundFighter1() {
   imgFighter2.classList.add("animationShaking");
-  let damagecalcul = attFighter1 * 0.2 - defFighter2 * 0.02;
+  let damagecalcul = attFighter1 * 0.4 - defFighter2 * 0.02;
   if (damagecalcul < 0) {
     damagecalcul = 0;
   }
@@ -197,7 +197,7 @@ function roundFighter1() {
 
 function roundFighter2() {
   imgFighter1.classList.add("animationShaking");
-  let damagecalcul = attFighter2 * 0.2 - defFighter1 * 0.02;
+  let damagecalcul = attFighter2 * 0.4 - defFighter1 * 0.02;
   if (damagecalcul < 0) {
     damagecalcul = 0;
   }
