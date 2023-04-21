@@ -5,16 +5,17 @@ img {
   width: 60%;
   height: 60%;
 }
+
 .main-container {
-  height: 50vh;
+  height: 49vh;
   width: 80vw;
-  margin-bottom: 0;
   background-color: transparent;
   margin-top: 0px;
 }
 
 .fighter-container {
-  padding-top: 15px;
+  padding-top: 1rem;
+  margin-bottom: 3rem;
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 2fr 1fr 2fr;
@@ -34,7 +35,7 @@ img {
   flex-direction: column;
   align-items: center;
   color: black;
-  font-size: 23px;
+  font-size: 0.8rem;
 }
 .fighter2 {
   justify-self: center;
@@ -44,7 +45,7 @@ img {
   flex-direction: column;
   align-items: center;
   color: black;
-  font-size: 23px;
+  font-size: 0.8rem;
 }
 .fightZone {
   justify-self: center;
@@ -56,7 +57,7 @@ img {
   justify-self: center;
   align-self: center;
   grid-area: fightLaunch;
-  font-size: 30px;
+  font-size: 1.2rem;
 }
 
 button {
@@ -66,7 +67,7 @@ button {
 .fighter {
   margin: 10px;
   position: relative;
-  max-height: 30vh;
+  max-height: 23vh;
   width: auto;
   border-radius: 16px;
 }
