@@ -18,11 +18,11 @@ const CatList = function (cat) {
   //this.cat is an array of cat
   this.cat = cat;
 };
-
+//function to add a cat
 CatList.prototype.addCat = function (Cat) {
   this.cat.push(Cat);
 };
-
+//function to remove a cat
 CatList.prototype.removeCat = function (catName) {
   for (let i = 0; i < state.catList.cat.length; i++) {
     if (state.catList.cat[i].name === catName) {
@@ -30,7 +30,7 @@ CatList.prototype.removeCat = function (catName) {
     }
   }
 };
-
+//function to save to local storage
 CatList.prototype.saveToLocalStorage = function () {
   localStorage.setItem("catList", JSON.stringify(state.catList.cat));
 };
@@ -44,9 +44,3 @@ const Cat = function (style, filepath, name, att, def, hp) {
   this.hp = hp;
   this.name = name;
 };
-
-$("#links a").click(function (e) {
-  e.preventDefault();
-  var beepOne = $("#beep-one")[0];
-  beepOne.play();
-});
