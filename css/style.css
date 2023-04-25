@@ -1,14 +1,14 @@
 * {
   box-sizing: border-box;
+  text-align: center;
   font-family: "Sedgwick Ave Display", cursive;
 }
 html {
   scroll-behavior: smooth;
-  text-align: center;
 }
 body {
   background-color: #333533;
-  font-family: "Sedgwick Ave Display", cursive;
+
   color: #d6d6d6;
 }
 header {
@@ -29,23 +29,26 @@ header {
 
 footer {
   background-color: #202020;
-  padding-top: 7px;
-  height: 1.8rem;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-
+.footer-container {
+  margin: 4px;
+}
 ul {
   display: flex;
   justify-content: center;
   font-weight: 800;
 }
 
+li {
+  margin: 15px;
+}
+
 a {
   text-decoration: none;
   color: #ffd100;
-  list-style-type: none;
   padding: 7px;
   border-radius: 10px;
   box-shadow: #333533;
@@ -55,27 +58,23 @@ a:hover {
   background-color: #ffd100;
   color: #333533;
 }
-li {
-  margin: 15px;
-}
 
 .main-container {
   width: 80vw;
   margin: 0 auto;
   margin-top: 1rem;
   margin-bottom: 3rem;
-  font-size: 17px;
+  font-size: 1rem;
+  font-family: "Sedgwick Ave Display", cursive;
   background-color: #333533;
+}
+.home-container {
+  font-family: sans-serif;
 }
 
 h1 {
-  font-size: 34px;
-}
-
-h2,
-h3 {
-  font-family: sans-serif;
-  box-shadow: black;
+  font-size: 2rem;
+  font-family: "Sedgwick Ave Display", cursive;
 }
 
 .homeimage {
@@ -83,7 +82,7 @@ h3 {
   margin-bottom: 5px;
 }
 
-h4 {
+h2 {
   font-family: sans-serif;
   font-weight: 800;
   color: #ffd100;
@@ -98,15 +97,7 @@ p {
   padding: 3px;
 }
 
-.rumble {
-  font-size: 20px;
-}
-
 .rumble:hover {
-  color: #ffd100;
-}
-
-.rumble1:hover {
   color: orangered;
   background-color: #333533;
 }

@@ -1,6 +1,9 @@
+.main-container {
+  color: #ffee32;
+  font-family: "Sedgwick Ave Display", cursive;
+}
 #newCat {
   display: grid;
-
   grid-template-columns: 1.3fr 0.7fr;
   grid-template-rows: 1.5fr 0.5fr;
   gap: 10px 10px;
@@ -15,14 +18,14 @@
   grid-area: Img;
 }
 img {
-  width: 70%;
-  height: 70%;
+  height: 30vh;
+  width: auto;
+  border-radius: 16px;
 }
 .statistique {
   justify-self: center;
   align-self: center;
   grid-area: Statistique;
-
   display: flex;
   flex-direction: column;
 }
@@ -38,13 +41,10 @@ img {
   font-size: 30px;
 }
 
-label {
-  float: left;
+.style-selector > label {
+  display: inline-block;
   margin-bottom: 5px;
-  margin-left: 10px;
-}
-input {
-  float: right;
+  margin-right: 5px;
 }
 
 .slider {
@@ -67,14 +67,6 @@ input {
   cursor: pointer; /* Cursor on hover */
 }
 
-.main-container {
-  width: 80vw;
-  margin: 0 auto;
-  background-color: #333533;
-  margin-top: 1rem;
-  color: #ffee32;
-}
-
 .statistique {
   font-family: sans-serif;
 }
@@ -91,10 +83,4 @@ input {
 
 .button:hover {
   color: #ffd100;
-}
-
-img {
-  height: 30vh;
-  width: auto;
-  border-radius: 16px;
 }
