@@ -18,4 +18,4 @@ Here is the color theme choose:
 ## Website link
 
 Website available at:
-[link](https://cat-fighter.github.io/Cat-fighter/html/catfactory.html)
+[link](https://cat-fighter.github.io/Cat-fighter/html/index.html)
