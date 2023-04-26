@@ -10,8 +10,6 @@ const imgFighter2 = document.getElementById("fighter2Img");
 imgFighter1.style.visibility = "hidden";
 imgFighter2.style.visibility = "hidden";
 
-var delayRoundMilliseconds = 5000;
-
 //get text element to update the view dependant of the figther pick
 //fighter1
 const textHpFighter1 = document.getElementById("hpFighter1");
@@ -41,7 +39,7 @@ function loadCats() {
   const cats = JSON.parse(localStorage.getItem("catList")) || [];
   state.catList = new CatList(cats);
 }
-
+//populate dropdown list
 function populateForm() {
   for (let i in state.catList.cat) {
     let newFighter1 = new Option(state.catList.cat[i].name);
@@ -94,11 +92,11 @@ function handleFighter2Change(event) {
     }
   }
 }
-
+//to make pause between round
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
+//get random number between min and max included
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -181,7 +179,7 @@ async function handleRumble(event) {
   }
   reset.style.visibility = "visible";
 }
-
+//round fighter 1
 function roundFighter1() {
   imgFighter2.classList.add("animationShaking");
   let damagecalcul = attFighter1 * 0.5 - defFighter2 * 0.02;
@@ -194,7 +192,7 @@ function roundFighter1() {
   }
   textHpFighter2.innerHTML = hpFighter2.toFixed(2);
 }
-
+//round fighter 2
 function roundFighter2() {
   imgFighter1.classList.add("animationShaking");
   let damagecalcul = attFighter2 * 0.5 - defFighter1 * 0.02;
